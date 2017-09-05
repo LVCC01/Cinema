@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.cinema.MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="visible"
+        android:id="@+id/rv_posters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_error_message_display"
+        style="@style/ErrorScreen"
+        android:text="@string/error_message"
+        android:visibility="visible"/>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_indicator"
+        style="@style/ProgressBar"
+        android:visibility="invisible" />
+
+</FrameLayout>

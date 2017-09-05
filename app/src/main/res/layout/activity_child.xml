@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="sans-serif"
+        android:orientation="vertical"
+        android:textColor="@color/grey500"
+        tools:context="com.example.android.cinema.ChildActivity">
+
+        <TextView
+            android:id="@+id/child_tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            android:textStyle="normal"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/child_tv_releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/grey500"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-regular"
+            app:layout_constraintLeft_toLeftOf="@+id/child_tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/child_tv_title" />
+
+        <TextView
+            android:id="@+id/child_tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange500"
+            android:textSize="45sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/child_tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/child_tv_releaseDate" />
+
+        <TextView
+            android:id="@+id/child_tv_rating_constant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey500"
+            android:textSize="16sp"
+            android:paddingBottom="8dp"
+            android:fontFamily="sans-serif-regular"
+            android:layout_marginLeft="8dp"
+            android:text="@string/rating_constant"
+            app:layout_constraintLeft_toRightOf="@+id/child_tv_rating"
+            app:layout_constraintBottom_toBottomOf="@+id/child_tv_rating" />
+
+        <ImageView
+            android:id="@+id/child_iv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="false"
+            android:foregroundGravity="center"
+            android:scaleType="fitStart"
+            app:layout_constraintLeft_toLeftOf="@id/child_tv_title"
+            app:layout_constraintTop_toBottomOf="@id/child_tv_rating" />
+
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/play_trailer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toRightOf="@+id/child_iv"
+                app:layout_constraintTop_toTopOf="@+id/child_iv"
+                android:src="@mipmap/ic_play_arrow_white_48dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey800"
+            android:text="@string/watch_trailer"
+            android:fontFamily="sans-serif-regular"
+            android:textStyle="italic"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@+id/play_trailer"
+            app:layout_constraintBottom_toBottomOf="@+id/play_trailer"
+            app:layout_constraintLeft_toRightOf="@+id/play_trailer"
+            android:layout_marginLeft="8dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/display_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/play_trailer"
+            app:layout_constraintTop_toBottomOf="@+id/play_trailer"
+            android:src="@mipmap/ic_visibility_white_48dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey800"
+            android:text="@string/read_reviews"
+            android:fontFamily="sans-serif-regular"
+            android:textStyle="italic"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@+id/display_reviews"
+            app:layout_constraintBottom_toBottomOf="@+id/display_reviews"
+            app:layout_constraintLeft_toRightOf="@+id/display_reviews"
+            android:layout_marginLeft="8dp"/>
+
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/star"
+            style="?android:attr/starStyle"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:textOn=""
+            android:textOff=""
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/play_trailer"
+            app:layout_constraintTop_toBottomOf="@+id/display_reviews" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey800"
+            android:text="@string/favorite_list"
+            android:fontFamily="sans-serif-regular"
+            android:textStyle="italic"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@+id/star"
+            app:layout_constraintBottom_toBottomOf="@+id/star"
+            app:layout_constraintLeft_toLeftOf="@+id/star"
+            android:layout_marginLeft="24dp"/>
+
+        <TextView
+            android:id="@+id/child_tv_plot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/grey500"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@+id/child_tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/child_iv" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+

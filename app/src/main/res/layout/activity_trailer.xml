@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_item_selector"
+    tools:context="com.example.android.cinema.MainActivity">
+
+    <TextView
+        android:id="@+id/trailer_title"
+        style="@style/TitleAction"
+        android:text="@string/trailer_list_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_trailers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/trailer_title"
+        app:layout_constraintTop_toBottomOf="@+id/trailer_title">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_error_message_display"
+        style="@style/ErrorScreen"
+        android:text="@string/error_message"
+        android:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading_indicator"
+        style="@style/ProgressBar"
+        android:visibility="invisible" />
+
+</android.support.constraint.ConstraintLayout>

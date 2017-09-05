@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Cinema</string>
+    <string name="popular_movies">POPULAR</string>
+    <string name="top_rated_movies">TOP-RATED</string>
+    <string name="Rating">Rating</string>
+    <string name="ReleaseDate">Release Date</string>
+    <string name="error_message">Failed to get results. Please try again</string>
+    <string name="rating_constant">/10</string>
+    <string name="watch_trailer">TRAILER</string>
+    <string name="read_reviews">REVIEW</string>
+    <string name="favorite_list">FAVORITE</string>
+    <string name="review_list_title">REVIEWS:</string>
+    <string name="trailer_list_title">TRAILERS:</string>
+    <string name="favorite_list_title">FAVORITE MOVIES:</string>
+
+    <!-- Text Attributes -->
+    <string name="ROBOTO">ROBOTO</string>
+</resources>
